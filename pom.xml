@@ -11,5 +11,15 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <distribution.url>https://maven.pkg.github.com/vssavin/${project.artifactId}</distribution.url>
+        <github.server.id>github</github.server.id>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>${github.server.id}</id>
+            <name>User management library</name>
+            <url>${distribution.url}</url>
+        </repository>
+    </distributionManagement>
 </project>
